@@ -20,6 +20,37 @@ $(document).ready(function(){//tell browser to load html and css first
         //sets items in local storage
         localStorage.setItem(text, time);
     })
+    function timeTracker(){
+        //current number of hours
+        var timeNow = moment().hour();
+
+        //loop over timeblocks 
+        $(".time-block").each(function(){
+            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+
+            //check time and add classes for timeblock colors
+            if (blockTime < timeNow) {
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("past");
+            }
+            else if (blockTime === timeNow){
+                $(this).removeClass("future");
+                $(this).removeClass("past");
+                $(this).addClass("present");
+            } 
+            else {
+                $(this).removeClass("past");
+                $(this).removeClass("present");
+                $(this).addClass("future");
+            }
+
+
+
+        })
+    }
+
+
 
 })
 
