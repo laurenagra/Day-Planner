@@ -2,17 +2,20 @@
 // WHEN I open the planner
 // THEN the current day is displayed at the top of the calendar
 //Use moment here 
-var timeDisplayEl = $('#time-display');
-
-
-function displayTime() {
-    var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-    timeDisplayEl.text(rightNow);
-  }
+// Display today's day and date
+var todayDate = moment().format('dddd, MMM Do YYYY');
+$("#currentDay").html(todayDate);
 // WHEN I scroll down
 // THEN I am presented with timeblocks for standard business hours
 // WHEN I view the timeblocks for that day
 // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+
+
+
+
+
+
+
 //if statement with time based criteria to set the colors
 // WHEN I click into a timeblock
 //Click event that opens a memo? Or a Card
