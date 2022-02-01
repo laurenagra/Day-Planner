@@ -17,7 +17,7 @@
 > [Check out my planner here!](https://laurenagra.github.io/Day-Planner/) 
 
 ## Screenshots 
-![This is how the site should look!](./third-party-apis.gif)
+![This is how the site should look!](./assets/images/third-party-apis.gif)
 
 
 ## Code 

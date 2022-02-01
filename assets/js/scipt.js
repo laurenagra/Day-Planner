@@ -3,7 +3,7 @@ $(document).ready(function () {
   $("#currentDay").text(moment().format("MMM Do YYYY, hh:mm:ss a")); //moment.js
 
   //assign event listener for save button applied to each time block
-  $(".saveBtn").on("click", function () {
+  $(".saveBtn").click(function () {
     console.log(this);
 
     //get nearby values in jquery
@@ -11,7 +11,7 @@ $(document).ready(function () {
     var time = $(this).parent().attr("id"); // taken the change from the parent html id attribute
 
     //sets items in local storage
-    localStorage.setItem(text, time);
+    localStorage.setItem(time, text);
   });
 
   function timeTracker() {
@@ -40,7 +40,7 @@ $(document).ready(function () {
   }
 
   //Get items from local storage if any exist
-  $("#hour8 .description").val(localStorage.getItem("hour8"));
+  //use space between hour and description to denote that desc is a child of the hour element 
   $("#hour9 .description").val(localStorage.getItem("hour9"));
   $("#hour10 .description").val(localStorage.getItem("hour10"));
   $("#hour11 .description").val(localStorage.getItem("hour11"));
