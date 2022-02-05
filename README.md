@@ -35,7 +35,7 @@ SO THAT I can manage my time effectively
 - Moment.js
 
 ## Status
-- Project is incomplete 
+- Project is complete as of February 1st, 2022
 
 ## Inspiration
 - GA Tech Bootcamp Homework 5 
